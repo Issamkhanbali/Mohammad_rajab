@@ -60,7 +60,7 @@
  .about-section {
     background: #f9fafc;
     padding: 60px 20px;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family:  'Nunito', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.8;
     color: #333;
   }
@@ -148,7 +148,10 @@
         onclick="location.href='index.html'" 
         style="cursor: pointer;" />
     </div>
-    <nav class="main-nav">
+      <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+<nav class="main-nav" id="mainNav">
       <ul>
         <li>
           <a href="index.html" data-section="how-we-are">Who We Are</a>
@@ -179,10 +182,9 @@
       </ul>
     </nav>
     <div class="actions">
-     <select id="langSelector">
+     <!-- <select id="langSelector">
   <option value="EN">EN</option>
-  <!-- <option value="FR">FR</option> -->
-</select>
+</select> -->
       <!-- <button class="site-btn">Our Sites</button> -->
     </div>
   </header>

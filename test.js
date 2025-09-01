@@ -236,6 +236,17 @@ document.querySelectorAll(".veggie-card").forEach(card => {
 });
 
 
-document.querySelector(".close").addEventListener("click", () => {
-  popup.style.display = "none";
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".main-nav");
+
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent immediate close
+  nav.classList.toggle("active");
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+    nav.classList.remove("active");
+  }
 });

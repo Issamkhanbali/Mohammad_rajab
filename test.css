@@ -8,7 +8,7 @@
   .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center !important;
     padding: 15px 30px;
     background: white;
     border-bottom: 1px solid #ddd;
@@ -664,7 +664,7 @@ button#confirm {
   /* Header */
   .site-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start !important;
     padding: 10px 20px;
     gap: 12px;
   }
@@ -676,7 +676,8 @@ button#confirm {
   }
 
   .logo {
-    width: 140px;
+    width: 120px;
+   margin-right: 130px;
   }
 
   /* Hero */
@@ -825,4 +826,64 @@ button#confirm {
   button#confirm {
     padding: 10px;
   }
+
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hide toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+.menu-toggle {
+    display: block;           /* Show only on mobile */
+    position: absolute;          /* Fix it at the right of viewport */
+    top: 20px;                /* Distance from top */
+    right: 20px;              /* Distance from right */
+    z-index: 9999;            /* Make sure it stays above everything */
+    font-size: 28px;
+    background: #fff;         /* Optional styling */
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #314e43;
+    /* Prevent any parent from affecting it */
+}
+
+  .main-nav {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .main-nav.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .main-nav ul li {
+    margin: 10px 0;
+  }
+  .header-container {
+    display: block;}
+    .submenu {
+          width: 80%;
+    }
 }
